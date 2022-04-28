@@ -20,16 +20,16 @@ class enemy1:
         
         self.baseAtk = atk
         self.baseHp = hp
-        self.spe = spe
-        self.spa = spa
+        self.baseSpe = spe
+        self.baseSpa = spa
     
-    def move_basicAttack():
+    def move_basicAttack(self):
         # returns a list of attack details:
         # (category, type, power, accuracy)
         return (0, 0, 50, 100)
     
-    def move_basicSpaIncrease():
-        self.spa *= 
+    def move_basicSpaIncrease(self):
+        self.spa += self.baseSpa * 0.5
 
 class allay1:
     # constractor for allay stats
