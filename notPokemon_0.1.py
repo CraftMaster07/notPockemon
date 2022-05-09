@@ -60,7 +60,7 @@ class ally1:
         return (0, 0, 15, 85, 2+random.randint(0,4))
     
     def move_basicAtkIncrease(self):
-        self.Atk += self.baseAtk * 0.5
+        self.atk += self.baseAtk * 0.5
 
 
 def damageCalculation(pwr, atk):
@@ -89,7 +89,7 @@ while playerA.hp > 0 or playerB.hp > 0:
     # start attack!
     if turn%2 == 0:
         ####
-        move = (playerA.move_basicAttack(), playerA.move_multyHitAttack(), 2)[playerAMove]
+        move = (playerA.move_basicAttack(), playerA.move_multyHitAttack(), 2)[int(playerAMove)]
         if move != 2:
             for i in range(move[4]):
                 if random.randint(0, 100) < move[3]:
@@ -98,7 +98,7 @@ while playerA.hp > 0 or playerB.hp > 0:
         elif move == 2:
             playerA.move_basicAtkIncrease()
         ####
-        move = (playerB.move_basicAttack(), playerB.move_multyHitAttack(), 2)[playerBMove]
+        move = (playerB.move_basicAttack(), playerB.move_multyHitAttack(), 2)[int(playerBMove)]
         if move != 2:
             for i in range(move[4]):
                 if random.randint(0, 100) < move[3]:
@@ -108,7 +108,7 @@ while playerA.hp > 0 or playerB.hp > 0:
             playerB.move_basicAtkIncrease()
         ####
     else:        
-        move = (playerB.move_basicAttack(), playerB.move_multyHitAttack(), 2)[playerBMove]
+        move = (playerB.move_basicAttack(), playerB.move_multyHitAttack(), 2)[int(playerBMove)]
         if move != 2:
             for i in range(move[4]):
                 if random.randint(0, 100) < move[3]:
@@ -117,7 +117,7 @@ while playerA.hp > 0 or playerB.hp > 0:
         elif move == 2:
             playerB.move_basicAtkIncrease()
         ####
-        move = (playerA.move_basicAttack(), playerA.move_multyHitAttack(), 2)[playerAMove]
+        move = (playerA.move_basicAttack(), playerA.move_multyHitAttack(), 2)[int(playerAMove)]
         if move != 2:
             for i in range(move[4]):
                 if random.randint(0, 100) < move[3]:
