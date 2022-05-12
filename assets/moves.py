@@ -17,6 +17,12 @@ class basicAttack(moveAttackFormat):
   def __init__(self):
     super().__init__(0, 0, 40, 100, 1)
 
+class quickAttack(moveAttackFormat):
+  def __init__(self):
+    super().__init__(0, 0, 40, 100, 1)
+    self.priority = 1
+
+
 class multyHitAttack(moveAttackFormat):
   def __init__(self):
     super().__init__(0, 0, 15, 85, 5)
