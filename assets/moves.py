@@ -39,7 +39,11 @@ class xScissor(moveAttackFormat):
     def __init__(self):
         super().__init__("bug", 0, 80, 100, 1)
 
+class Gust(moveAttackFormat): # not gen1
+  def __init__(self):
+    super().__init__("flying", 0, 40, 100, 1)
 
+        
 class airSlash(moveAttackFormat): # not gen1
   def __init__(self):
     super().__init__("flying", 0, 75, 95, 1)
@@ -50,10 +54,10 @@ class wingAttack(moveAttackFormat):
     super().__init__("flying", 0, 35, 100, 1)
 
 
-# stat moves should have type somehow 
-class basicAtkIncrease():
+# stat moves should have tipes somehow 
+class agility():
   def __init__(self, fighter):
-    fighter.atk += fighter.baseAtk * 0.5
+    fighter.atk += fighter.baseAtk * 1
 
 
 class tailWind(): # should last 3 turns
