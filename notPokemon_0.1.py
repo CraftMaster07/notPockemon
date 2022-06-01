@@ -20,3 +20,8 @@ def damageCalculation(pwr, atk):
     damage = (pwr * atk)/50+2
     
     return damage
+
+
+def combat(fighter1, fighter2):
+    while fighter1.hp > 0 && fighter2.hp > 0:
+        pass
