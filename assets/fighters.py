@@ -22,13 +22,16 @@ class fighterFormat():
         self.baseHp = hp
         self.baseSpe = spe
         self.baseSpa = spa
-
+        
+        # moves are not included
 
 class pidgy(fighterFormat):
     # this fighter is based on pidgy
     def __init__(self):
         super().__init__(40, 45, 35, 56)
         self.move1 = moves.basicAttack()
+        self.move2 = moves.agility()
+        self.move3 = moves.wingAttack()
 
 
 class ratata(fighterFormat):
