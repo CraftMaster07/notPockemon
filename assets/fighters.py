@@ -23,7 +23,17 @@ class fighterFormat():
         self.baseSpe = spe
         self.baseSpa = spa
         
-        # moves are not included
+        self.move1 = moves.null()
+        self.move2 = moves.null()
+        self.move3 = moves.null()
+        self.move4 = moves.null()
+        
+    def getMoves():
+        return(type(this.move1).__name__,
+               type(this.move2).__name__,
+               type(this.move3).__name__,
+               type(this.move4).__name__)
+     
 
 class pidgy(fighterFormat):
     # this fighter is based on pidgy
