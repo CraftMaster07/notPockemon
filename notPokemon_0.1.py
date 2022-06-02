@@ -25,3 +25,10 @@ def damageCalculation(pwr, atk):
 def combat(fighter1, fighter2):
     while fighter1.hp > 0 && fighter2.hp > 0:
         pass
+
+def turn(fighter):
+    printMoveChoices(fighter)
+    print("choose a move:")
+
+def printMoveChoices(fighter):
+    print("1 - {}, 2 - {}\n3 - {}, 4 - {}".format(*fighter.getMoves()))
