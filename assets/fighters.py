@@ -29,10 +29,10 @@ class fighterFormat():
         self.move4 = moves.null()
         
     def getMoves():
-        return(type(this.move1).__name__,
-               type(this.move2).__name__,
-               type(this.move3).__name__,
-               type(this.move4).__name__)
+        return(type(self.move1).__name__,
+               type(self.move2).__name__,
+               type(self.move3).__name__,
+               type(self.move4).__name__)
      
 
 class pidgy(fighterFormat):
@@ -40,7 +40,7 @@ class pidgy(fighterFormat):
     def __init__(self):
         super().__init__(40, 45, 35, 56)
         self.move1 = moves.basicAttack()
-        self.move2 = moves.agility()
+        self.move2 = moves.agility(self)
         self.move3 = moves.wingAttack()
 
 
