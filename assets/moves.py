@@ -3,6 +3,10 @@
 # this file contains the classes of
 # the moves for the main game
 
+class null():
+        return
+
+
 class moveAttackFormat():
         # returns a list of attack details:
         # (category, type, power, accuracy, times)
