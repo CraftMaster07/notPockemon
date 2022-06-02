@@ -24,11 +24,27 @@ def damageCalculation(pwr, atk):
 
 def combat(fighter1, fighter2):
     while fighter1.hp > 0 && fighter2.hp > 0:
-        pass
+        print("\n**player 1's turn**\n")
+        pickedMove1 = pickMove(fighter1)
+        pickedMove2 = pickMove(fighter2)
 
-def turn(fighter):
+def pickMove(fighter):
+    # gets number as input and returns move
     printMoveChoices(fighter)
-    print("choose a move:")
+    pickedMove = moveByNum(int(input("pick a move (1-4): ")))
+    return pickedMove
+
 
 def printMoveChoices(fighter):
     print("1 - {}, 2 - {}\n3 - {}, 4 - {}".format(*fighter.getMoves()))
+
+def moveByNum(fighter):
+    if pickedMoveNum == 1:
+        pickedMove = fighter.move1
+    if pickedMoveNum == 2:
+        pickedMove = fighter.move2
+    if pickedMoveNum == 3:
+        pickedMove = fighter.move3
+    if pickedMoveNum == 4:
+        pickedMove = fighter.move4
+    return pickedMove
