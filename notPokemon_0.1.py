@@ -17,16 +17,22 @@ def damageCalculation(pwr, atk):
     # rtype: int
     
     # damage result
-    damage = (pwr * atk)/50+2
-    
+    damage = ((pwr * atk)/50+2)*float(f'{random.randint(85,100)/100:.2f}')
+
     return damage
 
 
 def combat(fighter1, fighter2):
     while fighter1.hp > 0 && fighter2.hp > 0:
+        # move choosing
         print("\n**player 1's turn**\n")
         pickedMove1 = pickMove(fighter1)
         pickedMove2 = pickMove(fighter2)
+        
+        # its morbing time!
+        if whoAttacksFirst(fighter1, fighter2) == fighter1:
+            # continue here
+        print("{} used {}!".format())
 
 def pickMove(fighter):
     # gets number as input and returns move
@@ -36,15 +42,28 @@ def pickMove(fighter):
 
 
 def printMoveChoices(fighter):
+    # prints the available moves
     print("1 - {}, 2 - {}\n3 - {}, 4 - {}".format(*fighter.getMoves()))
 
 def moveByNum(fighter):
+    # turns number into corresponding move
     if pickedMoveNum == 1:
         pickedMove = fighter.move1
-    if pickedMoveNum == 2:
+    elif pickedMoveNum == 2:
         pickedMove = fighter.move2
-    if pickedMoveNum == 3:
+    elif pickedMoveNum == 3:
         pickedMove = fighter.move3
-    if pickedMoveNum == 4:
+    elif pickedMoveNum == 4:
         pickedMove = fighter.move4
+    else:
+        pickedMove = "error"
     return pickedMove
+
+
+def whoAttacksFirst(fighter1, fighter2):
+    # should add priority check
+    if fighter1.spe > fighter2.spe:
+        return fighter1
+    else:
+        return fighter2
+    
