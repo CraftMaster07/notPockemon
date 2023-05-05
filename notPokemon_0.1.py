@@ -37,7 +37,7 @@ def combat(fighter1, fighter2):
 def pickMove(fighter):
     # gets number as input and returns move
     printMoveChoices(fighter)
-    pickedMove = moveByNum(int(input("pick a move (1-4): ")))
+    pickedMove = moveByNum(fighter, int(input("pick a move (1-4): ")))
     return pickedMove
 
 
@@ -45,7 +45,7 @@ def printMoveChoices(fighter):
     # prints the available moves
     print("1 - {}, 2 - {}\n3 - {}, 4 - {}".format(*fighter.getMoves()))
 
-def moveByNum(fighter):
+def moveByNum(fighter, num):
     # turns number into corresponding move
     if pickedMoveNum == 1:
         pickedMove = fighter.move1
